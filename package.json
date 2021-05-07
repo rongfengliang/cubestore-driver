@@ -2,7 +2,7 @@
   "name": "@dalongrong/cubestore-driver",
   "description": "Cube Store driver with auth support",
   "author": "Cube Dev, Inc.",
-  "version": "0.27.7",
+  "version": "0.27.8",
   "repository": {
     "type": "git",
     "url": "https://github.com/rongfengliang/cubestore-driver.git"
