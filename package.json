@@ -1,0 +1,58 @@
+{
+  "name": "@dalongrong/cubestore-driver",
+  "description": "Cube Store driver with auth support",
+  "author": "Cube Dev, Inc.",
+  "version": "0.27.4",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rongfengliang/cubestore-driver.git"
+  },
+  "engines": {
+    "node": ">=10.8.0"
+  },
+  "files": [
+    "README.md",
+    "dist/src/*",
+    "dist/codegen/*"
+  ],
+  "main": "index.js",
+  "typings": "dist/src/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist && npm run tsc",
+    "tsc": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint src/*.ts",
+    "p": "yarn publish --access public",
+    "lint:fix": "eslint --fix src/*.ts"
+  },
+  "dependencies": {
+    "@cubejs-backend/cubestore": "^0.27.4",
+    "@cubejs-backend/query-orchestrator": "^0.27.4",
+    "@cubejs-backend/schema-compiler": "^0.27.4",
+    "@cubejs-backend/shared": "^0.27.4",
+    "csv-write-stream": "^2.0.0",
+    "flatbuffers": "^1.12.0",
+    "fs-extra": "^9.1.0",
+    "generic-pool": "^3.6.0",
+    "moment-timezone": "^0.5.31",
+    "mysql": "^2.16.0",
+    "node-fetch": "^2.6.1",
+    "sqlstring": "^2.3.2",
+    "tempy": "^1.0.1",
+    "ws": "^7.4.3"
+  },
+  "devDependencies": {
+    "@types/flatbuffers": "^1.10.0",
+    "@types/generic-pool": "^3.1.9",
+    "@types/mysql": "^2.15.17",
+    "@types/ws": "^7.4.0",
+    "jest": "^26.6.3",
+    "testcontainers": "^6.4.2",
+    "typescript": "~4.1.5"
+  },
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}
