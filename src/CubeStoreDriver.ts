@@ -41,14 +41,16 @@ export class CubeStoreDriver extends BaseDriver {
       password: config?.password || getEnv('cubeStorePass'),
     };
     this.baseUrl = (this.config.url || `ws://${this.config.host || 'localhost'}:${this.config.port || '3030'}/`).replace(/\/ws$/, '/').replace(/\/$/, '');
-    var authHeader:any = {}
-    if (this.config.user&&this.config.password) {
+    var authHeader: any = {}
+    if (this.config.user && this.config.password) {
       var base64Str = Buffer.from(`${this.config.user}:${this.config.password}`).toString('base64');
       authHeader = {
-        'Authorization':`Basic ${base64Str}`
-      }
+        headers: {
+          'Authorization': `Basic ${base64Str}`
+        }
+      };
     }
-    this.connection = new WebSocketConnection(`${this.baseUrl}/ws`,authHeader);
+    this.connection = new WebSocketConnection(`${this.baseUrl}/ws`, authHeader);
   }
 
   public async testConnection() {

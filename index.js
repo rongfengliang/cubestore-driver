@@ -1,5 +1,7 @@
 const { CubeStoreDriver } = require('./dist/src/CubeStoreDriver');
 const { CubeStoreDevDriver } = require('./dist/src/CubeStoreDevDriver');
+const { CubeStoreQuery } = require('./dist/src/CubeStoreQuery');
+
 const { isCubeStoreSupported, CubeStoreHandler } = require('./dist/src/rexport');
 
 /**
@@ -15,3 +17,6 @@ module.exports = CubeStoreDriver;
 module.exports.CubeStoreDevDriver = CubeStoreDevDriver;
 module.exports.isCubeStoreSupported = isCubeStoreSupported;
 module.exports.CubeStoreHandler = CubeStoreHandler;
+module.exports.CubeStoreQuery = CubeStoreQuery;
+module.exports.CubeStoreDriver = CubeStoreDriver;
+

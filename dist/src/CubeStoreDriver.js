@@ -35,7 +35,9 @@ class CubeStoreDriver extends query_orchestrator_1.BaseDriver {
         if (this.config.user && this.config.password) {
             var base64Str = Buffer.from(`${this.config.user}:${this.config.password}`).toString('base64');
             authHeader = {
-                'Authorization': `Basic ${base64Str}`
+                headers: {
+                    'Authorization': `Basic ${base64Str}`
+                }
             };
         }
         this.connection = new WebSocketConnection_1.WebSocketConnection(`${this.baseUrl}/ws`, authHeader);
